@@ -3,8 +3,8 @@ module Feeder
   class Parser
                 
     def initialize
+      seed_data if Post.all.empty?
       Feed.all.each do |feed|
-        seed_data if Post.all.empty?
         feed.update_attributes(:raw => Base64.encode64(Marshal.dump(Feedzirra::Feed.fetch_and_parse(feed.url))), :updates => false)
       end
     end
@@ -38,12 +38,14 @@ module Feeder
     end
     
     def seed_data
+      Feed.all.each do |feed|
         raw_feed = Feedzirra::Feed.fetch_and_parse(feed.url)
         if !feed.eql?(404)
           raw_feed.entries.each do |entry|
             populate_record(entry,feed.id)
           end
         end
+      end
     end
     
     def eval(feed,id,updates,url)
