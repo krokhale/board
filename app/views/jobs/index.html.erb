@@ -1,30 +1,44 @@
 <div class="container">
-  <h1 class="heading">Guild</h1>
-  <hr>
-  <h3><p class='description'></p></h3>
+  <h1 class="heading"></h1>
   <hr>
   <div class="span-7 colborder">
+        <h1 class="ranking"> <%= @posts_today%> jobs<br/> today</h1>
   </div>
   <div class="span-8 colborder">
+	    <p><%= image_tag @link %></p>	
   </div>
   <div class="span-7 last">
-	  <h2 class="join-top"><%#= link_to 'Post a job', new_job_path %></h2>
+    <h1 class="comment_count"><%= Post.all.count %> total<br/> jobs</h1>
   </div>
   <hr>
   <hr class="space">
-  <div class="span-24">
+  <div class="span-15 prepend-1 colborder">
+    <div  id="facts">
+    	<%= render 'job'%>
+    </div>
+	
 
-	<%= render 'job'%>
-	
-	<%#= will_paginate @feed_jobs%>
-	
     
   </div>
+  <div class="span-7 last">
+    <h2 class="tags">Ruby</h2>
+    <p id="facts">A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.</p>
+    <h2 class="share">Rails</h2>
+    <p id="facts">Tens of thousands of Rails applications are already live. People are using Rails in the tiniest part-time operations to the biggest companies.</p> 
+  </div>
   <hr>
-  <h2 class="join"><%#= link_to 'Post a job', new_job_path %></h2>
-
+  <h2 class="join"><%= will_paginate @posts%></h2>
   <hr>
 </div>
+
+
+
+
+
+
+
+
+
 
 
 

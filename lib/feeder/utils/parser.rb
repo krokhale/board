@@ -62,8 +62,9 @@ module Feeder
     end
     
     def populate_record(entry,id)
-        Post.create(:title => (entry.title.sanitize unless entry.title.nil?), :url => (entry.url unless entry.url.nil?), :published => (entry.published unless entry.published.nil?),
+        post = Post.create(:title => (entry.title.sanitize unless entry.title.nil?), :url => (entry.url unless entry.url.nil?), :published => (entry.published unless entry.published.nil?),
          :content => (entry.content.sanitize unless entry.content.nil?), :feed_id => id, :summary => (entry.summary unless entry.summary.nil?), :author => (entry.author.sanitize unless entry.author.nil?))
+         post.update_attribute(:published , Time.now)
          puts "Post created for #{Feed.find(id).url}" 
     end 
     

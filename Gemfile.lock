@@ -32,6 +32,7 @@ GEM
     builder (2.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    googlecharts (1.6.1)
     i18n (0.5.0)
     json (1.4.6)
     mail (2.2.13)
@@ -92,13 +93,16 @@ GEM
     tzinfo (0.3.23)
     vegas (0.1.8)
       rack (>= 1.0.0)
+    will_paginate (2.3.15)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  googlecharts
   mail
   pauldix-feedzirra
   rails (= 3.0.3)
   resque
   sqlite3-ruby
+  will_paginate

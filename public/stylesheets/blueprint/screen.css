@@ -62,7 +62,7 @@ table {margin-bottom:1.4em;width:100%;}
 th {font-weight:bold;}
 thead th {background:#c3d9ff;}
 th, td, caption {padding:4px 10px 4px 5px;}
-tbody tr:nth-child(even) td, tbody tr.even td {background:#e5ecf9;}
+/*tbody tr:nth-child(even) td, tbody tr.even td {background:#e5ecf9;}*/
 tfoot {font-style:italic;}
 caption {background:#eee;}
 .small {font-size:.8em;margin-bottom:1.875em;line-height:1.875em;}
@@ -81,7 +81,7 @@ caption {background:#eee;}
 border-radius: 15px;}
 .heading {border-color:#92CAE4;color:#205791;margin-top:40px;padding:32px;margin-bottom:-24px;margin-left:-28px;}
 .comment_count {color:#Fff;text-align:center;background:#444444;padding:48px;border-radius: 15px;}
-.ranking {color:#fff;text-align:center;background:#CF4D3F;padding:62px;text-align:right;text-indent:60px;font-size:50px;
+.ranking {color:#fff;text-align:center;background:#CF4D3F;padding:24px;text-align:right;text-indent:60px;font-size:50px;
 	border-radius: 15px;}
 .arrow {margin:-20px;float:left;}
 #facts {background:#EEEEEE;font-size:16px;margin-left:-40px;padding:16px;border-radius: 15px;}
@@ -94,12 +94,11 @@ width:245px;border-radius: 15px;}
 .share{background:#037187;color:#FFFFFF;font-size:30px;padding:12px;text-align:center;width:82px;border-radius: 15px;margin-top:20px;}
 .job-title-link{text-decoration:none;font-family:sans-serif;font-size:14px;font-weight:bold;}
 .job-description{font-family:helvetica;font-size:14px;}
-.join a{color:#fff;text-decoration:none;}
+.join a{color:#fff;text-decoration:underline;}
 .pagination{font-family: inherit;font-size: 22px;}
 .search-option{color: #000000; text-decoration: none;margin-left:48px;}
-.join-top{background:#46937D;color:#fff;font-weight:bold;text-align:center;border-radius: 15px;}
-.join-top a{color:#fff;text-decoration:none;}
 .time-ago{width:74px;}
+
 
 
 

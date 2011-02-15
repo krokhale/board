@@ -9,7 +9,7 @@
 
 	<td class="job-description">....<%= sanitize(post.summary)  %>..</td> 
 	
-	<td class="time-ago"> <%= distance_of_time_in_words(post.published,Time.now) %> ago </td>   		  	
+	<td class="time-ago"> <%= distance_of_time_in_words(post.created_at,Time.now) %> ago </td>   		  	
 </tr>
 
 <% end %>
